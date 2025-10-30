@@ -1,0 +1,49 @@
+(A) HOW TO UPLOAD FILES/FOLDER::::
+1) Create repository/ Github Account if new user
+2) Create repository
+3) or Inheritate other repository via link share with access
+4) OPEN GIT BASP
+5) TYPER THE COMMAND TO OPEN YOUR PARTICULAR DIRECTORY EXAMPLE:
+   cd Desktop/SHAMBHU/Main_folder (in my case)
+6) After open type
+   git init 
+   git add .
+   git commit -m "I WANTS TO DOWNLOAD YOUR FILES"
+   git branch -M origin main
+   git push -u <paste link here>
+ 
+done!
+
+
+(B) HOW TO UPLOAD INDIVIDUAL FILES:::::
+
+git add <filename with extension>   ENTER 
+git commit -m "NEW FILE UPLOAD"
+git push -u origin main
+
+
+
+
+
+
+(C) HOW TO DOWNLOAD INDIVIDUAL FILES:::::
+
+curl -o Altium_new_lib.txt https://raw.githubusercontent.com/shambhurajbanshi-dev/Altium_Main_library/main/Altium_new_lib.txt
+
+
+(D) HOW TO DOWNLOAD INDIVIDUAL FOLDER:::::
+
+
+# 1. Clone the repo but don’t download files yet
+git clone --no-checkout https://github.com/divyaGoel80044/Libraries.git
+cd Libraries
+
+# 2. Initialize sparse-checkout
+git sparse-checkout init --cone
+
+# 3. Choose the folder you want (replace 'folderB' with your actual folder)
+git sparse-checkout set folderB
+
+# 4. Checkout the main branch
+git checkout main
+
